@@ -1,0 +1,89 @@
+{
+    "device": {
+        "name": "MIFIS_FeFET_Baseline",
+        "architecture": "planar",
+        "geometry": {
+            "Lg": 100.0,
+            "W": 100.0,
+            "t_gate": 50.0,
+            "t_top_il": 2.0,
+            "t_fe": 13.8,
+            "t_bottom_il": 0.7,
+            "t_channel": 20.0,
+            "unit": "nm",
+            "note": "t_top_il reduced from 4.0nm to 2.5nm to reduce voltage division"
+        }
+    },
+    "materials": {
+        "ferroelectric": {
+            "name": "HZO",
+            "epsilon_r": 30.0,
+            "Pr": 18.0,
+            "Ps": 42.0,
+            "Ec": 0.5,
+            "units": {
+                "Pr": "uC/cm2",
+                "Ps": "uC/cm2",
+                "Ec": "MV/cm"
+            },
+            "note": "Ec reduced to 0.5 MV/cm (realistic for thin-film HZO) to achieve MW target"
+        },
+        "top_interlayer": {
+            "name": "SiO2",
+            "epsilon_r": 3.9
+        },
+        "bottom_interlayer": {
+            "name": "SiO2",
+            "epsilon_r": 3.9
+        },
+        "channel": {
+            "name": "Silicon",
+            "epsilon_r": 11.7,
+            "doping_type": "p",
+            "doping_concentration": 1e17,
+            "doping_unit": "cm-3"
+        },
+        "gate": {
+            "name": "TiN",
+            "work_function": 4.7
+        }
+    },
+    "simulation": {
+        "Vg_start": -6.0,
+        "Vg_end": 6.0,
+        "Vg_step": 0.1,
+        "Vd": 0.05,
+        "temperature": 300.0,
+        "sweep_direction": "double",
+        "units": {
+            "voltage": "V",
+            "temperature": "K"
+        }
+    },
+    "solver": {
+        "abs_error": 1e-12,
+        "rel_error": 1e-10,
+        "max_iterations": 50,
+        "mesh_scale": 1.0
+    },
+    "targets": {
+        "memory_window_min": 2.5,
+        "memory_window_target": 3.0,
+        "Ion_Ioff_min": 1e5,
+        "SS_max": 150,
+        "units": {
+            "memory_window": "V",
+            "SS": "mV/dec"
+        }
+    },
+    "literature_references": {
+        "Kuk_2024": {
+            "memory_window": 12.2,
+            "description": "Record MIFIS"
+        },
+        "Hu_2024": {
+            "memory_window": 6.3,
+            "description": "Optimized IL"
+        }
+    }
+}

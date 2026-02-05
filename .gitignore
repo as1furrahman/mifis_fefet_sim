@@ -1,0 +1,193 @@
+# MIFIS FeFET Simulation - Git Ignore File
+# =========================================
+
+# Python
+# ------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+# --------------------
+.venv/
+venv/
+ENV/
+env/
+.venv_plot/
+*.venv
+
+# IDE & Editors
+# -------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+
+# Jupyter Notebooks
+# -----------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+Untitled*.ipynb
+
+# Simulation Outputs (auto-generated)
+# ------------------------------------
+# Keep directory structure but ignore contents
+
+# Data directories
+data/raw/*
+data/processed/*
+data/meshes/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/meshes/.gitkeep
+
+# Results
+results/*.pkl
+results/*.csv
+results/*.json
+results/*.txt
+!results/.gitkeep
+
+# Plots (auto-generated)
+plots/*/
+plots/*.png
+plots/*.pdf
+plots/*.svg
+!plots/.gitkeep
+
+# Logs
+logs/*.txt
+logs/*.log
+!logs/.gitkeep
+
+# Temporary Files
+# ---------------
+*.tmp
+*.temp
+*.bak
+*.swp
+*.lock
+.cache/
+
+# DEVSIM / TCAD
+# -------------
+*.msh
+*.geo
+*.pos
+*.dat
+*.tecplot
+mesh_*.txt
+
+# Scientific Computing
+# --------------------
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.mat
+
+# Documentation builds
+# --------------------
+docs/_build/
+docs/_static/
+docs/_templates/
+*.rst~
+
+# Testing
+# -------
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_temp/
+
+# Archive (keep for reference)
+# -----------------------------
+# Uncomment the next line if you don't want to track archived files
+_archive/
+
+# OS-specific
+# -----------
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Backup files
+# ------------
+*~
+*.orig
+*.backup
+*.old
+
+# Large files
+# -----------
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Secrets & Credentials
+# ----------------------
+*.pem
+*.key
+*.crt
+*.cert
+.env
+.env.local
+secrets.json
+credentials.json
+config/secrets.json
+
+# Project-specific ignores
+# -------------------------
+# Uncomment any of these if needed:
+# notebooks/scratch/
+# notebooks/experimental/
+# tests/output/
+# scripts/temp/
+
+# Keep these essential files
+# ---------------------------
+!.gitignore
+!README.md
+!QUICKSTART.md
+!PROJECT_SUMMARY.md
+!WHAT_YOU_GET.md
+!requirements.txt
+!config/device_params.json
